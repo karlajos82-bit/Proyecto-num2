@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[ G H O S T ] - Unirse al Clero</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=UnifrakturMaguntia&family=Pirata+One&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: #05020a; color: #d4af37; font-family: 'Cinzel', serif; min-height: 100vh; display: flex; justify-content: center; }
+        .wrapper { width: 100%; max-width: 1100px; min-height: 100vh; display: flex; flex-direction: column; background: linear-gradient(135deg, #06030b 0%, #12031c 40%, #091026 80%, #05020a 100%); box-shadow: 0 0 30px rgba(0, 0, 0, 0.8); }
+        
+        /* Estilos Sidebar (igual al resto) */
+        .sidebar { width: 100%; border-bottom: 2px solid #9e782f; padding: 20px 15px; display: flex; flex-direction: column; align-items: center; background-color: rgba(5, 2, 10, 0.8); }
+        .logo-ghost { font-family: 'Pirata One', cursive; font-size: 2.2rem; color: #9e782f; margin-bottom: 5px; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); }
+        .sub-logo { font-family: 'UnifrakturMaguntia', serif; font-size: 0.75rem; color: #6a4c93; margin-bottom: 15px; letter-spacing: 5px; text-transform: uppercase; }
+        .nav-menu { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 6px; width: 100%; }
+        .nav-item { display: inline-block; color: #c4a460; text-decoration: none; font-size: 0.75rem; padding: 8px 12px; border: 1px solid rgba(158, 120, 47, 0.5); border-radius: 4px; background-color: rgba(26, 17, 43, 0.5); text-transform: uppercase; }
+        
+        /* Contenido */
+        .content-section { flex: 1; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; }
+        .main-title { font-family: 'UnifrakturMaguntia', serif; font-size: 2.5rem; color: #d4af37; margin-bottom: 20px; }
+        .satanic-cross { color: #503575; font-size: 1.5rem; margin-bottom: 30px; }
+        
+        /* Formulario */
+        .clero-form { width: 100%; max-width: 400px; display: flex; flex-direction: column; gap: 20px; }
+        .form-group { display: flex; flex-direction: column; gap: 8px; }
+        .form-label { color: #fff; font-size: 0.9rem; }
+        .form-input { padding: 12px; border: 1px solid #9e782f; background: rgba(0,0,0,0.3); color: #fff; border-radius: 4px; }
+        .form-button { padding: 15px; background-color: #9e782f; color: #000; font-weight: bold; border: none; cursor: pointer; text-transform: uppercase; border-radius: 4px; transition: 0.3s; }
+        .form-button:hover { background-color: #d4af37; }
+
+        @media (min-width: 769px) {
+            .wrapper { flex-direction: row; }
+            .sidebar { width: 280px; height: 100vh; border-right: 2px solid #9e782f; border-bottom: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <aside class="sidebar">
+            <div class="logo-ghost">GHOST</div>
+            <div class="sub-logo">MÉXICO</div>
+            <nav class="nav-menu">
+    <a href="index.html" class="nav-item">¿Qué es Ghost?</a>
+    <a href="skeletour.html" class="nav-item">El Skeletour</a>
+    <a href="anuncio.html" class="nav-item">Anuncio México</a>
+    <a href="conciertos.html" class="nav-item">Conciertos</a>
+    <a href="unirse.html" class="nav-item" style="border-bottom: 3px solid #d4af37;">Unirse al Clero</a>
+</nav>
+
+        </aside>
+
+        <main class="content-section">
+            <h1 class="main-title">Unirse al Clero</h1>
+            <div class="satanic-cross">&#x2021;</div>
+            
+            <!-- Cambié el action para que sea solo una simulación visual -->
+            <form class="clero-form" onsubmit="alert('¡Tu alma ha sido consagrada al Clero, bienvenido!'); return false;">
+                <div class="form-group">
+                    <label class="form-label">Tu Nombre</label>
+                    <input type="text" class="form-input" placeholder="Ingresa tu alias o nombre" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Tu Email</label>
+                    <input type="email" class="form-input" placeholder="ejemplo@clero.com" required>
+                </div>
+                <button type="submit" class="form-button">Consagrar Alianza</button>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
+

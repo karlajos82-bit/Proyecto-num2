@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[ G H O S T ] - Orígenes del Culto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=UnifrakturMaguntia&family=Pirata+One&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            background-color: #05020a; 
+            color: #d4af37; 
+            font-family: 'Cinzel', serif; 
+            min-height: 100vh; 
+            display: flex; 
+            justify-content: center; 
+        }
+
+        .wrapper { 
+            width: 100%; 
+            max-width: 1100px; 
+            min-height: 100vh; 
+            display: flex; 
+            flex-direction: column; 
+            background: linear-gradient(135deg, #06030b 0%, #12031c 40%, #091026 80%, #05020a 100%); 
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.8); 
+        }
+
+        /* 📱 MENÚ SUPERIOR (Para Celulares) */
+        .sidebar { 
+            width: 100%; 
+            border-bottom: 2px solid #9e782f; 
+            padding: 20px 15px; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            background-color: rgba(5, 2, 10, 0.8); 
+        }
+
+        .logo-ghost { font-family: 'Pirata One', cursive; font-size: 2.2rem; color: #9e782f; margin-bottom: 5px; letter-spacing: 2px; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); }
+        .sub-logo { font-family: 'UnifrakturMaguntia', serif; font-size: 0.75rem; color: #6a4c93; margin-bottom: 15px; letter-spacing: 5px; text-transform: uppercase; }
+        
+        .nav-menu { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 6px; width: 100%; }
+        
+        .nav-item { 
+            display: inline-block;
+            color: #c4a460; 
+            text-decoration: none; 
+            font-size: 0.75rem; 
+            padding: 8px 12px; 
+            border: 1px solid rgba(158, 120, 47, 0.5); 
+            border-radius: 4px; 
+            background-color: rgba(26, 17, 43, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease; 
+            text-align: center;
+        }
+        
+        .nav-item.active, .nav-item:hover { 
+            color: #fff; 
+            border-bottom: 3px solid #d4af37;
+            background-color: rgba(26, 17, 43, 0.9); 
+            text-shadow: 0 0 5px #d4af37;
+        }
+
+        /* CONTENIDO DE LA PÁGINA */
+        .content-section { flex: 1; padding: 30px 15px; display: flex; flex-direction: column; align-items: center; overflow-x: hidden; }
+        .section-badge { font-size: 10px; color: #9e782f; border: 1px solid #9e782f; padding: 6px 10px; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px; background: rgba(158,120,47,0.05); }
+        .main-title { font-family: 'UnifrakturMaguntia', serif; font-size: 2.2rem; color: #d4af37; text-align: center; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); }
+        .satanic-cross { color: #503575; font-size: 1.5rem; margin-bottom: 20px; }
+
+        .text-paragraph { color: #bfa6dc; font-size: 0.9rem; line-height: 1.6; text-align: left; margin-bottom: 25px; width: 100%; max-width: 550px; }
+        .highlight { color: #fff; font-weight: bold; }
+
+        .history-timeline, .tour-stats, .reaction-stream, .chronology { width: 100%; max-width: 550px; display: flex; flex-direction: column; gap: 20px; }
+        .history-core, .stat-box, .reaction-card, .event-node { border-left: 2px solid #503575; padding-left: 12px; width: 100%; }
+        .history-title, .stat-title, .reaction-title, .event-date { font-size: 0.85rem; color: #fff; font-weight: bold; text-transform: uppercase; }
+        .history-desc, .stat-desc, .reaction-desc, .event-desc { font-size: 0.8rem; color: #a291b5; line-height: 1.5; margin-top: 5px; text-align: left; }
+
+        /* 🖥️ FORMATO LATERAL (Para Computadoras) */
+        @media (min-width: 769px) {
+            .wrapper { flex-direction: row; }
+            .sidebar { width: 280px; min-width: 280px; height: 100vh; position: sticky; top: 0; border-right: 2px solid #9e782f; border-bottom: none; padding: 40px 20px; justify-content: flex-start; align-items: stretch; }
+            .logo-ghost { font-size: 2.5rem; text-align: center; }
+            .sub-logo { font-size: 0.8rem; text-align: center; margin-bottom: 40px; }
+            .nav-menu { flex-direction: column; gap: 8px; }
+            .nav-item { display: block; font-size: 0.85rem; padding: 12px 15px; text-align: left; border: none; background: transparent; width: 100%; }
+            .nav-item.active { border-left: 4px solid #d4af37; border-bottom: none; background-color: rgba(26,17,43,0.8); }
+            .content-section { padding: 50px 40px; align-items: flex-start; }
+            .main-title { font-size: 4rem; text-align: left; }
+            .text-paragraph { font-size: 0.95rem; text-align: justify; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <aside class="sidebar">
+            <div class="logo-ghost">GHOST</div>
+            <div class="sub-logo">Orígenes del Culto</div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-item active">¿Qué es Ghost?</a>
+                <a href="skeletour.html" class="nav-item">El Skeletour</a>
+                <a href="anuncio.html" class="nav-item">Anuncio México</a>
+                <a href="conciertos.html" class="nav-item">Conciertos</a>
+                <a href="unirse.html" class="nav-item">Unirse al Clero</a>
+                
+            </nav>
+        </aside>
+
+        <main class="content-section">
+            <div class="section-badge">GÉNESIS DEL CULTO</div>
+            <h1 class="main-title">¿Qué Es Ghost?</h1>
+            <div class="satanic-cross">&#x2021;</div>
+
+            <p class="text-paragraph">
+                Ghost es una de las fuerzas más teatrales, disruptivas e importantes del rock pesado y el metal contemporáneo. Concebida no solo como una agrupación musical, sino como una retorcida organización eclesiástica conocida mundialmente como <span class="highlight">El Clero</span>, la banda utiliza sermones melódicos, himnos de un pop-rock oscuro y una suntuosa estética litúrgica para cautivar a las masas.
+            </p>
+
+            <p class="text-paragraph">
+                A través de una sátira sofisticada, transforman los rituales sagrados tradicionales en loas dedicadas a entidades oscuras, logrando que estadios enteros canten coros eclesiásticos camuflados bajo melodías extremadamente pegajosas. Esta dualidad —letras profanas cantadas con armonías angelicales y riffs de guitarra memorables— es la clave de su ascenso como un fenómeno de culto global.
+            </p>
+
+            <div class="history-timeline">
+                <div class="history-core">
+                    <div class="history-title">El Origen y la Semilla Gótica</div>
+                    <div class="history-desc">
+                        El proyecto nació secretamente en <span class="highlight">Linköping, Suecia</span>, en 2006, cuando Tobias Forge escribió el riff de la canción 'Stand by Him'. Al darse cuenta de que la crudeza lírica y la atmósfera oscura no encajaban con su apariencia común, concibió la revolucionaria idea de formar una organización teatral, conceptual y completamente anónima.
+                    </div>
+                </div>
+
+                <div class="history-core">
+                    <div class="history-title">La Dinastía de los Papas</div>
+                    <div class="history-desc">
+                        El corazón del misterio radica en su liderazgo jerárquico. La banda es guiada por un vocalista que encarna a un antihéroe papal conocido como el <span class="highlight">Papa Emeritus</span>. Siguiendo las directrices de El Clero, este líder es "reemplazado" o degradado al final de cada ciclo de álbum para dar paso a una nueva encarnación (Papa Emeritus I, II, III, IV o variantes como el Cardinal Copia), refrescando el concepto estético de la banda en cada era.
+                    </div>
+                </div>
+
+                <div class="history-core">
+                    <div class="history-title">Los Nameless Ghouls</div>
+                    <div class="history-desc">
+                        Los instrumentistas que custodian los sermones musicales del Papa actúan bajo un anonimato absoluto. Conocidos como los <span class="highlight">Nameless Ghouls</span> (Espíritus sin Nombre) y las *Ghoulettes*, representan los elementos de la naturaleza (Fuego, Agua, Aire, Tierra y Éter) y portan máscaras idénticas que ocultan por completo su identidad, convirtiendo la individualidad en un servicio devoto al culto colectivo.
+                    </div>
+                </div>
+
+                <div class="history-core">
+                    <div class="history-title">Estilo Musical Camaleónico</div>
+                    <div class="history-desc">
+                        Musicalmente, Ghost es un camaleón sónico. Su propuesta entrelaza con maestría la pesadez del doom rock clásico y el heavy metal de los años 70 (fuertemente influenciado por Black Sabbath y Blue Öyster Cult) con la grandilocuencia del arena rock de los 80, combinándolo con sintetizadores eclesiásticos y estructuras melódicas propias del pop escandinavo moderno.
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+  </html>
+  

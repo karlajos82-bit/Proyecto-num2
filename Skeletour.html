@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[ G H O S T ] - El Skeletour</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=UnifrakturMaguntia&family=Pirata+One&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            background-color: #05020a; 
+            color: #d4af37; 
+            font-family: 'Cinzel', serif; 
+            min-height: 100vh; 
+            display: flex; 
+            justify-content: center; 
+        }
+
+        .wrapper { 
+            width: 100%; 
+            max-width: 1100px; 
+            min-height: 100vh; 
+            display: flex; 
+            flex-direction: column; 
+            background: linear-gradient(135deg, #06030b 0%, #12031c 40%, #091026 80%, #05020a 100%); 
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.8); 
+        }
+
+        /* 📱 MENÚ SUPERIOR (Para Celulares) */
+        .sidebar { 
+            width: 100%; 
+            border-bottom: 2px solid #9e782f; 
+            padding: 20px 15px; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            background-color: rgba(5, 2, 10, 0.8); 
+        }
+
+        .logo-ghost { font-family: 'Pirata One', cursive; font-size: 2.2rem; color: #9e782f; margin-bottom: 5px; letter-spacing: 2px; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); }
+        .sub-logo { font-family: 'UnifrakturMaguntia', serif; font-size: 0.75rem; color: #6a4c93; margin-bottom: 15px; letter-spacing: 5px; text-transform: uppercase; }
+        
+        .nav-menu { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 6px; width: 100%; }
+        
+        .nav-item { 
+            display: inline-block;
+            color: #c4a460; 
+            text-decoration: none; 
+            font-size: 0.75rem; 
+            padding: 8px 12px; 
+            border: 1px solid rgba(158, 120, 47, 0.5); 
+            border-radius: 4px; 
+            background-color: rgba(26, 17, 43, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease; 
+            text-align: center;
+        }
+        
+        .nav-item.active, .nav-item:hover { 
+            color: #fff; 
+            border-bottom: 3px solid #d4af37;
+            background-color: rgba(26, 17, 43, 0.9); 
+            text-shadow: 0 0 5px #d4af37;
+        }
+
+        /* CONTENIDO DE LA PÁGINA */
+        .content-section { flex: 1; padding: 30px 15px; display: flex; flex-direction: column; align-items: center; overflow-x: hidden; }
+        .section-badge { font-size: 10px; color: #9e782f; border: 1px solid #9e782f; padding: 6px 10px; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px; background: rgba(158,120,47,0.05); }
+        .main-title { font-family: 'UnifrakturMaguntia', serif; font-size: 2.2rem; color: #d4af37; text-align: center; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); }
+        .satanic-cross { color: #503575; font-size: 1.5rem; margin-bottom: 20px; }
+
+        .text-paragraph { color: #bfa6dc; font-size: 0.9rem; line-height: 1.6; text-align: left; margin-bottom: 25px; width: 100%; max-width: 550px; }
+        .highlight { color: #fff; font-weight: bold; }
+
+        .tour-stats { width: 100%; max-width: 550px; display: flex; flex-direction: column; gap: 20px; }
+        .stat-box { border-left: 2px solid #503575; padding-left: 12px; width: 100%; }
+        .stat-title { font-size: 0.85rem; color: #fff; font-weight: bold; text-transform: uppercase; }
+        .stat-desc { font-size: 0.8rem; color: #a291b5; line-height: 1.5; margin-top: 5px; text-align: left; }
+
+        /* 🖥️ FORMATO LATERAL (Para Computadoras) */
+        @media (min-width: 769px) {
+            .wrapper { flex-direction: row; }
+            .sidebar { width: 280px; min-width: 280px; height: 100vh; position: sticky; top: 0; border-right: 2px solid #9e782f; border-bottom: none; padding: 40px 20px; justify-content: flex-start; align-items: stretch; }
+            .logo-ghost { font-size: 2.5rem; text-align: center; }
+            .sub-logo { font-size: 0.8rem; text-align: center; margin-bottom: 40px; }
+            .nav-menu { flex-direction: column; gap: 8px; }
+            .nav-item { display: block; font-size: 0.85rem; padding: 12px 15px; text-align: left; border: none; background: transparent; width: 100%; }
+            .nav-item.active { border-left: 4px solid #d4af37; border-bottom: none; background-color: rgba(26,17,43,0.8); }
+            .content-section { padding: 50px 40px; align-items: flex-start; }
+            .main-title { font-size: 4rem; text-align: left; }
+            .text-paragraph { font-size: 0.95rem; text-align: justify; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <aside class="sidebar">
+            <div class="logo-ghost">GHOST</div>
+            <div class="sub-logo">MÉXICO</div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-item">¿Qué es Ghost?</a>
+                <a href="skeletour.html" class="nav-item active">El Skeletour</a>
+                <a href="anuncio.html" class="nav-item">Anuncio México</a>
+                <a href="conciertos.html" class="nav-item">Conciertos</a>
+                <a href="Unirse.html" class="nav-item">Unirse al Clero</a>
+            </nav>
+        </aside>
+
+        <main class="content-section">
+            <div class="section-badge">GIRA MUNDIAL</div>
+            <h1 class="main-title">Magno Skeletour</h1>
+            <div class="satanic-cross">&#x2021;</div>
+
+            <p class="text-paragraph">
+                El <span class="highlight">Skeletour World Tour</span> se consagró como la producción más masiva, ambiciosa y teatral en la historia de Ghost. Diseñado como una inmensa catedral itinerante, este tour marcó la consagración de la banda en el circuito global de estadios, llevando su peculiar sátira litúrgica y su rock pesado a niveles de audiencia sin precedentes.
+            </p>
+
+            <p class="text-paragraph">
+                Cada concierto de la gira operaba como una "misa negra" de alta tecnología. Con un imponente telón de fondo que imitaba vitrales góticos iluminados por sofisticados juegos de luces, una pasarela gigante y constantes ráfagas de pirotecnia, humo y confeti grabado con simbología del clero, la banda logró sumergir por completo a los asistentes en una experiencia mística e inolvidable.
+            </p>
+
+            <div class="tour-stats">
+                <div class="stat-box">
+                    <div class="stat-title">La Maquinaria en Europa</div>
+                    <div class="stat-desc">
+                        La gira comenzó arrasando en los recintos más icónicos de Inglaterra, Alemania, Francia y los países escandinavos. Con boletos agotados en minutos, El Clero demostró su poder de convocatoria masiva, incorporando por primera vez coristas dedicadas y secciones de viento en vivo para darle una atmósfera mucho más grandiosa y operística a sus canciones.
+                    </div>
+                </div>
+
+                <div class="stat-box">
+                    <div class="stat-title">La Conquista de Norteamérica</div>
+                    <div class="stat-desc">
+                        Al cruzar el Atlántico, el Skeletour rompió récords personales para el proyecto. El punto cumbre de esta etapa fue un histórico 'Sold Out' absoluto en el mítico <span class="highlight">Madison Square Garden</span> de Nueva York, un hito reservado únicamente para las leyendas consagradas del rock, consolidando el estatus de Tobias Forge como uno de los mentes creativas más influyentes de la actualidad.
+                    </div>
+                </div>
+
+                <div class="stat-box">
+                    <div class="stat-title">El Gran Cierre en México</div>
+                    <div class="stat-desc">
+                        La primera gran etapa mundial eligió a la Ciudad de México para su gran desenlace. El fervor inigualable de la feligresía latina motivó a que El Clero decidiera grabar por completo los rituales del Palacio de los Deportes en formato de cine de <span class="highlight">16 mm</span>, un registro audiovisual dorado destinado a inmortalizar para la eternidad la energía y la entrega del público más apasionado del planeta.
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
+
